@@ -1,0 +1,114 @@
+.img-user { 
+    background-color: white;
+  }
+  
+  .card {
+    background-image: linear-gradient(to bottom, #5574f7, #5b79f7, #617ef8, #6783f8, #6d88f8);
+    /* height: 150px; */
+    /* background-image: linear-gradient(to bottom, #617ef8, #959cfa, #bdbbfc, #e0dcfe, #ffffff);*/
+  }
+  
+  
+  .card-img img{
+    height: 100px;
+  }
+  
+  .card-description {
+    color: white;
+  }
+  
+  .card-description p { 
+    font-size: 0.8em;
+    margin-bottom: 0;
+  }
+  
+  .btn-footer .btn {
+    border-radius: 0 !important;
+    border: solid 1px white !important;
+    border-bottom: none !important;
+  }
+  
+  .btn-footer .btn:first-child {
+    border-left: none !important;
+  }
+  
+  .btn-footer .btn:last-child {
+    border-right: none !important;
+  }
+  .btn-footer .btn-primary {
+    background-color: #6d88f8 !important;
+  }
+  
+  .btn-footer .btn-primary:hover {
+    background-color: #6783f8 !important;
+  }
+  
+  /* Rating */
+  
+  /*shows the stars side by side, centered, and in reverse order than the HMTL*/
+  .rating {
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: center;
+    /* padding: 1em; */
+  }
+  
+  /*hides the radio buttons by forcing them out of the viewport*/
+  .rating__input{
+    position: absolute; 
+    left: -100vw;
+  }
+  /*hides label for 0 (unset)star rating */
+  .rating__label--hidden{
+    display:none;
+  }
+  
+  /* hides spans from sighted users */
+  .rating__star{
+    position: absolute; left: -100vw;
+    font-size: 1px
+  }
+  
+  .rating:hover,
+  .rating:focus-within,
+  .rating:active {
+    border-color: yellow;
+  }
+  
+  /*style the empty stars, sets position:relative as base for pseudo-elements*/
+  .rating__label {
+    position: relative;
+    width: 1em;
+    font-size: 1.3em;
+    color: #FFD700;
+    cursor: pointer;
+  }
+  
+  /* sets filled star pseudo-elements */
+  .rating__label::before{ 
+    content: "\2605";
+    position: absolute;
+    opacity: 0;
+  }
+  
+  /*overlays a filled start character to the hovered element and all previous siblings*/
+  .rating__label:hover:before,
+  .rating__label:hover ~ .rating__label:before {
+    opacity: 1 !important;
+  }
+  
+  /*overlays a filled start character on the selected element and all previous siblings*/
+  .rating__input:checked ~ .rating__label:before{
+    opacity:1;
+  }
+  
+  /*when an element is selected and pointer re-enters the rating container, selected rate and siblings get semi transparent, as reminder of current selection*/
+  .rating:hover > .rating__input:checked ~ .rating__label:before{ opacity: 0.4; }
+  
+  /*just aesthetics*/
+  h1, p{ text-align: center;}
+  p{ font-size: 1.2rem;}
+  @media only screen and (max-width: 600px) {
+    h1{font-size: 14px;}
+    p{font-size: 12px;}
+  }

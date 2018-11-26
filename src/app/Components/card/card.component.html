@@ -1,0 +1,56 @@
+<div class="card mb-3">
+
+  <!-- Imagem do card -->
+  <div class="card-img d-flex justify-content-center">
+    <img src="{{ card.cardImgUser }}" class="rounded-circle img-user my-3" width="100px">
+  </div>
+
+  <!-- Descricao do card -->
+  <div class="card-description">
+    <h6 class="text-center">{{ card.cardNome }}</h6>
+    <p class="text-center">{{ card.cardProfissao }}</p>
+
+    <!-- rating -->
+    <div class="rating">
+      <input aria-flowto="rating0" class="rating__input" type="radio" name="rating" value="5" id="rating5">
+      <label class="rating__label" for="rating5">☆
+        <span class="rating__star">5 Stars</span>
+      </label>
+
+      <input aria-flowto="rating5" class="rating__input" type="radio" name="rating" value="4" id="rating4">
+      <label class="rating__label" for="rating4">☆
+        <span class="rating__star">4 Stars</span>
+      </label>
+
+      <input aria-flowto="rating4" class="rating__input" type="radio" name="rating" value="3" id="rating3">
+      <label class="rating__label" for="rating3">☆
+        <span class="rating__star">3 Stars</span>
+      </label>
+
+      <input aria-flowto="rating3" class="rating__input" type="radio" name="rating" value="2" id="rating2">
+      <label class="rating__label" for="rating2">☆
+        <span class="rating__star">2 Stars</span>
+      </label>
+
+      <input aria-flowto="rating2" class="rating__input" type="radio" name="rating" value="1" id="rating1"
+        aria-flowto="rating2">
+      <label class="rating__label" for="rating1">☆
+        <span class="rating__star">1 Stars</span>
+      </label>
+
+      <input aria-flowto="rating1" class="rating__input" type="radio" name="rating" value="0" id="rating0">
+      <label class="rating__label rating__label--hidden" for="rating0">
+        <span class="rating__star">Not rated yet </span>
+      </label>
+
+    </div>
+
+    <!-- Footer do card -->
+    <div class="inline btn-footer">
+      <button type="button" class="btn btn-primary w-50">Perfil</button>
+      <button type="button" class="btn btn-primary w-50">Conversar</button>
+    </div>
+
+  </div>
+
+</div>

@@ -1,0 +1,41 @@
+/* You can add global styles to this file, and also import other style files */
+body{
+    background-color: rgba(0,0,0,0.1);
+}
+
+.gradient{
+    /* background: #1e5799; 
+    background: -moz-linear-gradient(45deg, #1e5799 0%, #2989d8 50%, #7db9e8 100%); 
+    background: -webkit-linear-gradient(45deg, #1e5799 0%,#2989d8 50%,#7db9e8 100%); 
+    background: linear-gradient(45deg, #1e5799 0%,#2989d8 50%,#7db9e8 100%); 
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#1e5799', endColorstr='#7db9e8',GradientType=1 );    */
+
+    background-image: linear-gradient(to right top, #5574f7, #3c8bff, #319fff, #42b2ff, #60c3ff);
+}
+
+.bg-darkblue{
+    background: #5887F9;
+}
+
+.bg-lightblue{
+    background: #60C3FF;
+}
+
+.shadow-soft{
+    box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
+}
+
+.shadow-hard{
+    box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 6px 12px rgba(0,0,0,0.23);
+}
+
+.img-nav{
+    margin-left: 10px;
+    max-width: 45px;
+    max-height: 45px;
+}
+
+.nav-item{
+    margin-right: 20px;
+}
+

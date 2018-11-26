@@ -1,0 +1,77 @@
+<app-navbar></app-navbar>
+<div class="container-fluid">
+  <!-- Bem vindo -->
+  <div class="row banner">
+    <div class="col-md-12">
+      <h3 class="text-white text-bold font-weight-bold">Seja bem-vindo, {{displayName}}</h3><br>
+      <h6 class="text-white">Com Sharing, você pode compartilhar suas experiências com outras pessoas.</h6>
+      <h6 class="text-white">Defina suas preferências para começar a compartilhar e aprender.</h6>
+
+      <div class="rectangle img-fluid shadow-soft">
+      <svg width="600" height="300">
+          <rect width="600" height="300" style="fill: #60C3FF;"/>
+        </svg>
+    </div>
+
+    </div>
+  </div>
+</div>
+
+<div class="container mt-5">
+    <div class="row mb-2 ">
+        <div class="col-md-6">
+          <div class="card flex-md-row mb-4 h-md-250">
+            <div class="card-body d-flex flex-column align-items-start bg-lightblue card-itens shadow-soft">
+              <h3><strong class="d-inline-block mb-2 text-white">Aprender</strong></h3>
+              <p class="card-text mb-auto text-white">Procure por assuntos e temas que deseja aprender. 
+                  Outros usuários com experiência no assunto pesquisado poderão lhe ajudar!</p>
+                  <form [formGroup]="learnForm" class="w-100 mt-4">
+                      <div class="form-row">
+                       <div class="form-group col-md-12 col-lg-10 col-sm-12 col-xs-12">
+                         <input type="text" formControlName="learn" class="form-control shadow-soft" id="learn" placeholder="Pesquise por temas que de deseja aprender" required> 
+                       </div>
+                       <div class="form-group col">
+                         <button type="submit" (click)="addItem(learnForm.value, learnBalloonItens)" class="form-control btn btn-add shadow-soft">+</button>
+                       </div>
+
+                      <div class="mt-3 ml-1" *ngFor="let balloon of learnBalloonItens">
+                      <app-balloon (click)="delete(balloon,learnBalloonItens)"  [balloon]="balloon"></app-balloon>
+                      </div>
+                    </div>
+              </form>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-6">
+            <div class="card flex-md-row mb-4 h-md-250 ">
+              <div class="card-body d-flex flex-column align-items-start bg-darkblue card-itens shadow-soft">
+                <h3><strong class="d-inline-block mb-2 text-white">Compartilhar</strong></h3>
+                <p class="card-text mb-auto text-white">Procure por assuntos e temas que você possui experiência.
+                    Ajude outros usuários a alcançarem seus objetivos!</p>
+                    <form [formGroup]="teachForm" class="w-100 mt-4">
+                        <div class="form-row">
+                         <div class="form-group col-md-12 col-lg-10 col-sm-12 col-xs-12">
+                           <input type="text" formControlName="teach" class="form-control shadow-soft" id="teach" placeholder="Pesquise temas para compartilhar experiências" required> 
+                         </div>
+                         <div class="form-group col">
+                           <button type="submit" (click)="addItem(teachForm.value, teachBalloonItens)" class="form-control btn btn-add shadow-soft">+</button>
+                         </div>
+  
+                        <div class="mt-3 ml-1" *ngFor="let balloon of teachBalloonItens">  
+                          <app-balloon (click)="delete(balloon,teachBalloonItens)" [balloon]="balloon"></app-balloon>
+                        </div>                          
+    
+                       </div>
+                     </form>
+              </div>
+            </div>
+          </div>
+        
+      </div>
+   
+
+    <button class="btn btn-outline-primary float-right" (click)="save()"><strong>Comece a usar</strong></button>
+
+  </div>
+

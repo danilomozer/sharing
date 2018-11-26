@@ -1,0 +1,39 @@
+section{
+    border: 0.2px solid rgba(0,0,0,0.4);
+    border-radius: 5px;
+    padding: 2rem;
+    background: #fafafa;;
+}
+
+p{
+    color:#757575;
+}
+
+.local{
+    color: #757575;
+    font-weight: 600;
+}
+
+.name{
+    margin-right: 1rem;
+    display: inline-block;
+}
+
+
+
+.stars{
+    
+}
+
+.rating-number{
+    display: inline-block;
+}
+
+.img-profile{
+    max-height: 300px;
+    border: 5px solid #E5E5E5;
+}
+
+.border-left{
+    /* border-right: 0.2px solid rgba(0,0,0,0.6); */
+}

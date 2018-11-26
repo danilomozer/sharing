@@ -1,0 +1,14 @@
+.ballon-item{
+    display: inline-block;
+    background: white;
+    border-radius: 5px;
+    text-align: center;
+    line-height: 30px;
+    margin: 5px;
+    height: 30px;
+    padding-left: 10px;
+    padding-right: 10px;
+    color: #707070;
+    font-weight: 500;
+    cursor: pointer;
+}

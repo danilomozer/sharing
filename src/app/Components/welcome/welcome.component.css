@@ -1,0 +1,62 @@
+.btn-add{
+    background-color: white;
+    color: #60C3FF;
+    text-align: center;  
+    line-height: 10px;  
+    font-size: 24pt 
+  
+}
+
+input::-webkit-input-placeholder {
+    color: #707070;
+  }
+
+.banner{
+   overflow: hidden;
+   background-color:  #5887F9;
+   padding-top: 80px;
+   padding-left: 150px;
+   padding-bottom: 50px;
+
+}
+
+.parallelogram {
+	width: 100px;
+	height: 50px;
+	transform: skew(20deg);
+    position: absolute;
+    float: right;
+    margin-left: 15px;
+}
+
+.rectangle{
+    -ms-transform: rotate(22deg); /* IE 9 */
+    -webkit-transform: rotate(22deg); /* Safari */
+    transform: rotate(22deg);
+    margin-left:80%;
+    margin-top:-15%;
+    position: absolute;
+}
+
+.cards{
+    border-radius: 8px;
+    padding: 10px;
+    height: 400px;
+}
+
+hr { 
+    display: block;
+    margin-top: 0.5em;
+    margin-bottom: 0.5em;
+    margin-left: auto;
+    margin-right: auto;
+    border-style: inset;
+    border-width: 1px;
+} 
+
+.card-itens{
+ border-radius: 8px;
+}
+.card{
+    border: none;
+}
